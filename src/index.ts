@@ -1,7 +1,10 @@
 import MatchReader from './MatchReader'
 import { MatchResult } from './MatchResult'
-const matchReader = new MatchReader('football.csv')
-const matches = matchReader.data
+import CsvFileReader from './CsvFileReader'
+
+const csvFileReader = new CsvFileReader('football.csv')
+const matchReader = new MatchReader(csvFileReader)
+const matches = matchReader.matches
 
 const teamName = 'Man United'
 let manUnitedWins = 0

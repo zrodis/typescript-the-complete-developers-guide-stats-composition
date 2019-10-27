@@ -11,7 +11,9 @@ interface DataReader {
 export default class MatchReader {
     matches: MatchData[] = []
 
-    constructor(public reader: DataReader) {}
+    constructor(public reader: DataReader) {
+        this.load()
+    }
 
     load() {
         this.reader.read()
